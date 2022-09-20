@@ -3,24 +3,23 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <artifactId>my-micro</artifactId>
+        <artifactId>my-common</artifactId>
         <groupId>com.coderdianxia</groupId>
         <version>0.0.1</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>my-common</artifactId>
-    <packaging>pom</packaging>
+    <artifactId>my-common-swagger</artifactId>
 
-    <description>通用模块</description>
-    <modules>
-        <module>my-common-core</module>
-        <module>my-common-mybatis</module>
-        <module>my-common-swagger</module>
-    </modules>
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
     </properties>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.spring4all</groupId>
+            <artifactId>swagger-spring-boot-starter</artifactId>
+        </dependency>
+    </dependencies>
 </project>
