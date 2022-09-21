@@ -2,7 +2,7 @@ package ${package.Controller};
 
 
 import org.springframework.web.bind.annotation.RequestMapping;
-
+import io.swagger.annotations.Api;
 #if(${restControllerStyle})
 import org.springframework.web.bind.annotation.RestController;
 #else
@@ -11,10 +11,15 @@ import org.springframework.stereotype.Controller;
 #if(${superControllerClassPackage})
 import ${superControllerClassPackage};
 #end
+#if(${superControllerClass})
+import com.coderdianxia.core.controller.BaseController;
+import ${package.Entity}.${entity};
+import ${package.Service}.${table.serviceName};
+#end
 
 /**
  * <p>
- * $!{table.comment} 前端控制器haha
+ * $!{table.comment} 前端控制器
  * </p>
  *
  * @author ${author}
@@ -26,12 +31,13 @@ import ${superControllerClassPackage};
 @Controller
 #end
 @RequestMapping("#if(${package.ModuleName})/${package.ModuleName}#end/#if(${controllerMappingHyphenStyle})${controllerMappingHyphen}#else${table.entityPath}#end")
+@Api(tags = "$!{table.comment}")
 #if(${kotlin})
 class ${table.controllerName}#if(${superControllerClass}) : ${superControllerClass}()#end
 
 #else
 #if(${superControllerClass})
-public class ${table.controllerName} extends ${superControllerClass} {
+public class ${table.controllerName} extends ${superControllerClass}<${table.serviceName},${entity}> {
 #else
 public class ${table.controllerName} {
 #end

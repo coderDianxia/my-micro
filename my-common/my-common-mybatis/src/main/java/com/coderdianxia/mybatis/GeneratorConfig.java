@@ -69,7 +69,8 @@ public class GeneratorConfig {
                             .pathInfo(Collections.singletonMap(OutputFile.mapperXml, generatorProperties.getOutputDir()+File.separator +generatorProperties.getResources()+File.separator+"mapper")); // 设置mapperXml生成路径
                 })
                 .strategyConfig(builder -> {
-                    builder.addInclude("GEN_TABLE") // 设置需要生成的表名
+                    builder
+//                     .addInclude()     // 设置需要生成的表名
                     .entityBuilder()
                             .enableLombok()   //开启lombok
                             .enableTableFieldAnnotation() //开启生成实体时生成字段注解

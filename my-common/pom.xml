@@ -17,6 +17,7 @@
         <module>my-common-core</module>
         <module>my-common-mybatis</module>
         <module>my-common-swagger</module>
+        <module>my-common-redis</module>
     </modules>
     <properties>
         <maven.compiler.source>8</maven.compiler.source>

@@ -21,7 +21,7 @@ import java.util.List;
 @Data
 public class GeneratorProperties {
 
-    private String author="author";//作者
+    private String author="coderDianxia";//作者
 
     private String outputDir=System.getProperty("os.name").toLowerCase().contains("windows") ? System.getProperty("user.dir") : "/tmp";//指定输出目录。
 
