@@ -26,6 +26,9 @@ targert/
 
 .idea/*
 
+logs
+
 *.iml
 
 *.lst
+
