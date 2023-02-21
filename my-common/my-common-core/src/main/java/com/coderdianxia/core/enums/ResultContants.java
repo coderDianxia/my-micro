@@ -15,9 +15,9 @@ public enum ResultContants{
 
     FAIL(500,"系统内部错误"),
 
-    VAILD_ERROR(501,"校验失败"),
+    VAILD_ERROR(40001,"校验失败"),
 
-    BUSINESS_ERROR(502,"业务处理失败");
+    BUSINESS_ERROR(40002,"业务处理失败");
 
     private int code;
 
